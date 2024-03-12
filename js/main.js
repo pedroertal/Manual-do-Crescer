@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   counter("count1", 0, 1337, 3000);
   counter("count2", 100, 826, 2500);
   counter("count3", 0, 52, 3000);
-  counter("count4", 0, 10742, 3000);
+  counter("count4", 0, 500, 3000);
 });
 
 // Animação

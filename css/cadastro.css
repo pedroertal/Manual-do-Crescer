@@ -37,9 +37,11 @@ ol {
 
 :root {
     --primary-color: #F1E5FF;
-    --secondry-color: #9F84FF;
-    --third-color: #7F5AFF;
+    --secondry-color: #ECBD59;
+    --third-color: #a78515;
     --primary-blue: #4BBADD;
+    --primary-orange: #D47833;
+    --primary-yellow: #ECB955;
     --white-color: #fff;
     --text-color: #434343;
     --title-blue: #003252;
@@ -47,8 +49,10 @@ ol {
     --text-blue: #102D36;
     --text-grey: #E9E9E9;
     --black-color: #000;
+    --primary-text: #59470E;
     --primary-font: 'Quicksand', sans-serif;
     --secondry-font: 'Roboto', sans-serif;
+
 }
 
 html {
@@ -103,7 +107,7 @@ body {
 .nav-link {
     font-size: 0.9375rem;
     font-weight: 600;
-    color: var(--black-color);
+    color: var(--primary-text);
     letter-spacing: 1px;
 }
 
@@ -116,7 +120,7 @@ body {
 
 
 .navbar-nav a:hover {
-    color: var(--secondry-color) !important;
+    color: var(--black-color) !important;
 }
 
 
@@ -152,12 +156,41 @@ body {
     left: 326px;
 }
 
+.main-btn {
+    border-radius: 3px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5rem;
+    background-color: var(--secondry-color);
+    border: 0.1875rem solid var(--third-color);
+    color: var(--white-color);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    font-family: var(--secondry-font);
+    box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+    -webkit-transition: all .4s ease-out 0s;
+    transition: all .4s ease-out 0s;
+}
 
+.main-btn:hover {
+    color: var(--black-color);
+}
 
 .navigation-wrap .main-btn {
     padding: 0.3125rem 1.4375rem;
     box-shadow: none;
     margin-left: 0.625rem;
+}
+
+/* Titulo */
+
+.titulo {
+    position: relative;
+    top: 115px;
+    left: 280px;
 }
 
 /* Navbar no scroll */
@@ -175,4 +208,57 @@ body {
 
 .scroll-on {
     color: var(--black-color);
+}
+
+/* Formulário */
+
+.contato-dados {
+    background-color: var(--primary-orange);
+}
+
+.contato-formulario {
+    background-color: var(--primary-yellow);
+}
+
+.user-login {
+    text-align: center;
+}
+
+.user-login input {
+    padding-top: 20px;
+    width: 90%;
+    border: none;
+    margin-bottom: 20px;
+    background: none;
+    border-bottom: 2px solid #A95532;
+}
+
+.user-login input::placeholder {
+    transition: padding 1s ease, font-size 0.5s ease;
+}
+
+.user-login input:focus::placeholder {
+    color: black;
+    font-weight: bold;
+    position: relative;
+    top: -25px;
+    padding: 5px 10px;
+    font-size: 14px;
+    padding: 0;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.button-login button {
+    align-items: center;
+    margin-bottom: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 13px;
+    width: 55%;
+    background-color: #80903A;
 }
