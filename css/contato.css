@@ -143,6 +143,7 @@
 
 .form input[type="text"],
 .form input[type="email"],
+.form input[type="password"],
 .form textarea {
   font: 400 1rem/1.5 "Roboto", sans-serif;
   background: var(--white-color);
@@ -179,7 +180,7 @@
 }
 
 .blue-btn-form:hover {
-  color: var(--title-blue);
+  background: linear-gradient(180deg, #4B8EDD 0%, #4BBADD 0.01%, #4AB0D0 100%);
 }
 
 .contato-formulario span img {

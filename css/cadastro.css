@@ -210,7 +210,7 @@ body {
     color: var(--black-color);
 }
 
-/* Formulário */
+/* Formulário Esquerda */
 
 .contato-dados {
     background-color: var(--primary-orange);
@@ -261,4 +261,29 @@ body {
     padding: 13px;
     width: 55%;
     background-color: #80903A;
+    margin-top: 20px;
+    margin-bottom: 80px;
 }
+
+.button-login button:hover {
+    background-color: #596428;
+}
+
+/* Login Externo */
+
+.contato-redes {
+    justify-content: center;
+    margin-right: 40px;
+}
+
+/* Formulário Direita */
+
+.blue-btn-form {
+    text-align: center;
+    width: 100%;
+    background: #372814 !important;
+}
+.button-cadastro {
+    margin-left: 50px;
+}
+
