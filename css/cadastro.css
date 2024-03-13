@@ -374,3 +374,15 @@ body {
 .footer p {
     color: var(--secondry-color);
 }
+
+/* Abas */
+
+.pais {
+    color: var(--primary-yellow);
+    position: relative;
+    left: 25%;
+    text-align: center;
+    width: 50%;
+    background: var(--primary-brown);
+    border-radius: 5px;
+}
