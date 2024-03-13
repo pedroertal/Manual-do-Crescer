@@ -301,7 +301,7 @@ p {
 
 /* Counter  */
 .counter-section {
-  background-color: var(--primary-color);
+  background-color: var--primary-color();
   padding: 2.5rem 0;
 }
 

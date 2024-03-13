@@ -122,6 +122,9 @@
   display: flex;
   gap: 32px;
   padding-left: 28px;
+  /* background-color: #FFF9E5;
+  width: 50%;
+  border-radius: 9px; */
 }
 
 .form {
@@ -169,7 +172,8 @@
   border: none;
   border-radius: 8px;
   border-radius: 6.085px;
-  background: linear-gradient(180deg, #4B8EDD 0%, #4BBADD 0.01%, #4AB0D0 100%);
+  background: #4B8EDD;
+  /* background: linear-gradient(180deg, #4B8EDD 0%, #4BBADD 0.01%, #4AB0D0 100%); */
   box-shadow: 0px 1.2px 2.43403px 0px rgba(0, 0, 0, 0.10);
   color: var(--white-color);
   font-size: 1.0375rem;
@@ -180,7 +184,8 @@
 }
 
 .blue-btn-form:hover {
-  background: linear-gradient(180deg, #4B8EDD 0%, #4BBADD 0.01%, #4AB0D0 100%);
+  background: #3669a3;
+  /* background: linear-gradient(180deg, #3669a3 0%, #3669a3 0.01%, #3669a3 100%); */
 }
 
 .contato-formulario span img {

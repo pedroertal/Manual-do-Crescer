@@ -21,6 +21,7 @@
 
 a,
 a:hover {
+    color: blue;
     text-decoration: none;
 
 }
@@ -36,12 +37,13 @@ ol {
 }
 
 :root {
-    --primary-color: #F1E5FF;
+    --primary-color: #F7ECCF;
     --secondry-color: #ECBD59;
     --third-color: #a78515;
     --primary-blue: #4BBADD;
     --primary-orange: #D47833;
     --primary-yellow: #ECB955;
+    --primary-brown: #392A18;
     --white-color: #fff;
     --text-color: #434343;
     --title-blue: #003252;
@@ -55,11 +57,17 @@ ol {
 
 }
 
+
+
 html {
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
+    width: 100%;
+    height: 100%;
     font-family: var(--primary-font);
     font-size: 100%;
     font-weight: 400;
@@ -124,11 +132,11 @@ body {
 }
 
 
-.main-title {
+ .main-title {
     position: relative;
     height: 100px;
     z-index: 2;
-}
+} 
 
 .main-title h1 {
     position: absolute;
@@ -189,8 +197,8 @@ body {
 
 .titulo {
     position: relative;
-    top: 115px;
-    left: 280px;
+    padding-bottom: 50px;
+    margin-top: 120px;        
 }
 
 /* Navbar no scroll */
@@ -200,7 +208,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--primary-color);
+    background: #F7ECCF;
     box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.09);
     transition: all .5s ease-in-out 0s;
     color: var(--black-color);
@@ -212,12 +220,22 @@ body {
 
 /* Formulário Esquerda */
 
+
+.alavanque-bg::before {
+    top: 460px;
+}
+
+.contato {
+    margin-top: 0px;
+}
 .contato-dados {
-    background-color: var(--primary-orange);
+    border-radius: 5px 0 0 5px;
+    background: var(--primary-orange) url(../images/icones/bolinha-cadastro-esquerdo.svg) no-repeat bottom 45px left 60px;
 }
 
 .contato-formulario {
-    background-color: var(--primary-yellow);
+    border-radius: 5px 0 0 5px;
+    background: var(--primary-yellow) url(../images/icones/bolinha-cadastro-direito.svg) no-repeat bottom 45px right 60px;
 }
 
 .user-login {
@@ -247,6 +265,27 @@ body {
     padding: 0;
 }
 
+
+.alter-login {
+    position: relative;
+    margin-bottom: 80px;
+    margin-top: 20px;
+    color: #A95632;
+    font-weight: bold;
+}
+
+.alter-login::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    border-radius: 8px;
+    left: 50px;
+    top: 35px;
+    height: 2px;
+    background-color: #A95532;
+    
+}
+
 ::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.7);
 }
@@ -262,7 +301,8 @@ body {
     width: 55%;
     background-color: #80903A;
     margin-top: 20px;
-    margin-bottom: 80px;
+    
+    transition: all 0.5s ease;
 }
 
 .button-login button:hover {
@@ -273,17 +313,64 @@ body {
 
 .contato-redes {
     justify-content: center;
-    margin-right: 40px;
+    display: flex;
+    background-color: #FFF9E5;
+    width: 65%;
+    border-radius: 9px;
+    margin-left: 18%;
+    padding: 5px;
+}
+
+.contato-redes a img {
+    fill: black !important;
 }
 
 /* Formulário Direita */
 
 .blue-btn-form {
-    text-align: center;
+    position: relative;
+    bottom: 25%;
+    left: 50%;
     width: 100%;
-    background: #372814 !important;
+    background: #372814;
+    transition: all 0.5s ease;
 }
+
+.blue-btn-form:hover {
+    background: #644925;
+}
+
 .button-cadastro {
     margin-left: 50px;
 }
 
+/* Footer  */
+
+#footer {
+    background: var(--primary-brown);
+    /* box-shadow: 0px 30px 0px 0px var(--primary-brown); */
+}
+
+
+
+.footer .footer-link {
+    font-size: 1rem;
+    color: var(--secondry-color);
+    padding: 0 1.875rem;
+    font-weight: 500;
+    font-family: var(--secondry-font);
+}
+
+.footer a:hover {
+    color: var(--text-purple) !important;
+}
+
+.footer a i {
+    font-size: 1.5rem;
+    color: var(--secondry-color);
+    padding: 0 1rem;
+}
+
+.footer p {
+    color: var(--secondry-color);
+}
