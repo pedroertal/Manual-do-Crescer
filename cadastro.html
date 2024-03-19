@@ -56,14 +56,21 @@
                 <h3 style="position: relative; font-size: 24px; color: #59470E; left: 4px;">O PRIMEIRO PASSO!</h3>
                 <h1 style="font-weight: bold; font-size: 60px; color: #59470E;">Cadastre-se</h1>
             </div>
+            <div class="user-type">
+                <div class="pais" id="paisBtn" onclick="selecionarAba(this)">
+                    <button class="user-type-button">Pais e Mães</button>
+                    
+                </div>
+                <div class="profissional" id="profissionalBtn" onclick="selecionarAba(this)">
+                    <button class="user-type-button">Profissional</button>
+                    
+                </div>
+            </div>
             <div class="contato container fadeInUp" data-anime="800">
                 <section class="contato-dados" aria-label="Endereço">
-
                     <h2 style="font-weight: bold;">Já possui cadastro?</h2>
                     <div class="user-login">
-                        <div class="pais">
-                            <h1 style="font-size: 20px;">Pais e Mães</h1>
-                        </div>
+
                         <div class="user-email">
                             <input type="email" name="" id="input-login" autocomplete="off" placeholder="Email" />
                         </div>
@@ -157,6 +164,7 @@
         crossorigin="anonymous"></script>
     <!-- JS Próprio -->
     <script src="./js/plugins/simple-anime.js"></script>
+    <script src="js/cadastro.js"></script>
     <script src="./js/main.js"></script>
 
 </body>

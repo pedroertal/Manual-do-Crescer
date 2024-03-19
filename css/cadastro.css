@@ -3,6 +3,19 @@
 @import './responsive.css';
 @import './contato.css';
 
+@keyframes mudarCores {
+    0% {
+        background-position: 0% 0%, 100% 0%;
+        /* Inicialmente, o primeiro gradiente começa à esquerda e o segundo à direita */
+    }
+
+    100% {
+        background-position: 100% 0%, 0% 0%;
+        /* No final, o primeiro gradiente termina à direita e o segundo à esquerda */
+    }
+}
+
+
 *,
 *::after,
 *::before {
@@ -132,11 +145,11 @@ body {
 }
 
 
- .main-title {
+.main-title {
     position: relative;
     height: 100px;
     z-index: 2;
-} 
+}
 
 .main-title h1 {
     position: absolute;
@@ -198,7 +211,7 @@ body {
 .titulo {
     position: relative;
     padding-bottom: 50px;
-    margin-top: 120px;        
+    margin-top: 120px;
 }
 
 /* Navbar no scroll */
@@ -208,7 +221,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: #F7ECCF;
+    background: var(--primary-color);
     box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.09);
     transition: all .5s ease-in-out 0s;
     color: var(--black-color);
@@ -228,14 +241,33 @@ body {
 .contato {
     margin-top: 0px;
 }
+
+.contato-dados {
+    background-color: var(--primary-orange); /* Cor de fundo padrão para .contato-dados */
+}
+
+.contato-formulario {
+    background-color: var(--primary-yellow); /* Cor de fundo padrão para .contato-formulario */
+}
+
+
 .contato-dados {
     border-radius: 5px 0 0 5px;
     background: var(--primary-orange) url(../images/icones/bolinha-cadastro-esquerdo.svg) no-repeat bottom 45px left 60px;
+    transition: background-color 0.5 ease;
 }
 
 .contato-formulario {
     border-radius: 5px 0 0 5px;
     background: var(--primary-yellow) url(../images/icones/bolinha-cadastro-direito.svg) no-repeat bottom 45px right 60px;
+    transition: background-color 0.5 ease;
+}
+
+.contato-dados,
+.contato-formulario {
+    border-radius: 5px 0 0 5px;
+    transition: background-color 0.5s ease;
+    /* Adiciona a transição suave */
 }
 
 .user-login {
@@ -274,7 +306,7 @@ body {
     font-weight: bold;
 }
 
-.alter-login::after{
+.alter-login::after {
     content: "";
     position: absolute;
     width: 80%;
@@ -283,7 +315,7 @@ body {
     top: 35px;
     height: 2px;
     background-color: #A95532;
-    
+
 }
 
 ::-webkit-input-placeholder {
@@ -301,7 +333,7 @@ body {
     width: 55%;
     background-color: #80903A;
     margin-top: 20px;
-    
+
     transition: all 0.5s ease;
 }
 
@@ -377,12 +409,59 @@ body {
 
 /* Abas */
 
-.pais {
-    color: var(--primary-yellow);
+.user-type {
+    width: 100%;
     position: relative;
-    left: 25%;
+    display: flex;
+    justify-items: center;
     text-align: center;
-    width: 50%;
+    justify-content: center;
+}
+
+.user-type-button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: none;
+    color: var(--primary-yellow);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 20px;
+    position: relative;
+    transition: transform 0.5s ease, background-color 0.5s ease, border-radius 0.5s ease;
+}
+
+
+
+.pais {
+    position: relative;
+    width: 15%;
+    left: -7%;
+    color: var(--primary-yellow);
+    text-align: center;
     background: var(--primary-brown);
     border-radius: 5px;
+}
+
+.profissional {
+    position: relative;
+    left: 6%;
+    width: 25%;
+    color: var(--primary-yellow);
+    text-align: center;
+    background: var(--primary-brown);
+    border-radius: 5px;
+}
+
+.user-type-button:hover {
+    border-radius: 5px;
+    background-color: #49361f;
+}
+
+.pais.selecionado .user-type-button,
+.profissional.selecionado .user-type-button {
+    background-color: #49361f;
+    border-radius: 5px;
+    transform: scale(1.2);
+    /* Aumenta o tamanho das abas selecionadas */
 }
