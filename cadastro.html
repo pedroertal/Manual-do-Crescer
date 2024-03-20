@@ -56,17 +56,24 @@
                 <h3 style="position: relative; font-size: 24px; color: #59470E; left: 4px;">O PRIMEIRO PASSO!</h3>
                 <h1 style="font-weight: bold; font-size: 60px; color: #59470E;">Cadastre-se</h1>
             </div>
+            <!--Abas-->
             <div class="user-type">
                 <div class="pais" id="paisBtn" onclick="selecionarAba(this)">
-                    <button class="user-type-button">Pais e Mães</button>
-                    
+                    <button class="user-type-button">
+                        Pais e Mães
+                        <img src="images/icones/seta-aba.svg" alt="" class="seta-aba" id="setaPais">
+                    </button>
                 </div>
                 <div class="profissional" id="profissionalBtn" onclick="selecionarAba(this)">
-                    <button class="user-type-button">Profissional</button>
-                    
+                    <button class="user-type-button">
+                        Profissional
+                        <img src="images/icones/seta-aba.svg" alt="" class="seta-aba" id="setaProfissional">
+                    </button>
                 </div>
             </div>
+            <!--Conteúdo das abas-->
             <div class="contato container fadeInUp" data-anime="800">
+                <!--Login-->
                 <section class="contato-dados" aria-label="Endereço">
                     <h2 style="font-weight: bold;">Já possui cadastro?</h2>
                     <div class="user-login">
@@ -83,6 +90,7 @@
                         </div>
                         <p class="alter-login">ou faça login com</p>
                     </div>
+                    <!--Cadastro-->
                     <div class="contato-redes">
                         <a href="./">
                             <img src="./images/icones/google.svg">

@@ -1,6 +1,9 @@
 document.getElementById('paisBtn').addEventListener('click', function () {
     this.classList.add('selecionado');
+    document.getElementById('setaPais').classList.add('selecionado');
+
     document.getElementById('profissionalBtn').classList.remove('selecionado');
+    document.getElementById('setaProfissional').classList.remove('selecionado');
 
     // Troca a cor de fundo dos elementos .contato-dados e .contato-formulario
     document.querySelector('.contato-dados').style.backgroundColor = '#D47833';
@@ -9,7 +12,10 @@ document.getElementById('paisBtn').addEventListener('click', function () {
 
 document.getElementById('profissionalBtn').addEventListener('click', function () {
     this.classList.add('selecionado');
+    document.getElementById('setaProfissional').classList.add('selecionado');
+
     document.getElementById('paisBtn').classList.remove('selecionado');
+    document.getElementById('setaPais').classList.remove('selecionado');
 
     // Troca a cor de fundo dos elementos .contato-dados e .contato-formulario
     document.querySelector('.contato-dados').style.backgroundColor = '#ECB955';
