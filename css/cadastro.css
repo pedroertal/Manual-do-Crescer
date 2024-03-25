@@ -411,6 +411,7 @@ body {
 
 .user-type {
     width: 100%;
+    left: 10%;
     position: relative;
     display: flex;
     justify-items: center;
@@ -439,7 +440,7 @@ body {
 .pais {
     position: relative;
     width: 15%;
-    left: -7%;
+    left: 4%;
     color: var(--primary-yellow);
     text-align: center;
     background: var(--primary-brown);
@@ -449,7 +450,7 @@ body {
 .profissional {
     position: relative;
     left: 6%;
-    width: 25%;
+    width: 20%;
     color: var(--primary-yellow);
     text-align: center;
     background: var(--primary-brown);
