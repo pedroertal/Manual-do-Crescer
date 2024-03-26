@@ -243,24 +243,30 @@ body {
 }
 
 .contato-dados {
-    background-color: var(--primary-orange); /* Cor de fundo padrão para .contato-dados */
+    background-color: var(--primary-brown);
+    /* Cor de fundo padrão para .contato-dados */
 }
 
 .contato-formulario {
-    background-color: var(--primary-yellow); /* Cor de fundo padrão para .contato-formulario */
+    background-color: var(--primary-yellow);
+    /* Cor de fundo padrão para .contato-formulario */
 }
 
 
 .contato-dados {
     border-radius: 5px 0 0 5px;
-    background: var(--primary-orange) url(../images/icones/bolinha-cadastro-esquerdo.svg) no-repeat bottom 45px left 60px;
+    background: var(--primary-brown) url(../images/icones/bolinha-cadastro-esquerdo.svg) no-repeat bottom 45px left 60px;
     transition: background-color 0.5 ease;
 }
 
 .contato-formulario {
     border-radius: 5px 0 0 5px;
     background: var(--primary-yellow) url(../images/icones/bolinha-cadastro-direito.svg) no-repeat bottom 45px right 60px;
-    transition: background-color 0.5 ease;
+    transition: background-color 0.5 ease, img 0.5 ease;
+}
+
+.contato-formulario ::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.25);
 }
 
 .contato-dados,
@@ -280,7 +286,7 @@ body {
     border: none;
     margin-bottom: 20px;
     background: none;
-    border-bottom: 2px solid #A95532;
+    border-bottom: 2px solid #ECB955;
 }
 
 .user-login input::placeholder {
@@ -288,7 +294,7 @@ body {
 }
 
 .user-login input:focus::placeholder {
-    color: black;
+    color: #ECB955;
     font-weight: bold;
     position: relative;
     top: -25px;
@@ -302,7 +308,7 @@ body {
     position: relative;
     margin-bottom: 80px;
     margin-top: 20px;
-    color: #A95632;
+    color: #ECB955;
     font-weight: bold;
 }
 
@@ -314,12 +320,12 @@ body {
     left: 50px;
     top: 35px;
     height: 2px;
-    background-color: #A95532;
+    background-color: #ECB955;
 
 }
 
 ::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.7);
+    color: #ECB955;
 }
 
 .button-login button {
@@ -427,7 +433,6 @@ body {
     width: 100%;
     border: none;
     background: none;
-    color: var(--primary-yellow);
     font-weight: bold;
     font-size: 20px;
     padding: 10px 20px;
@@ -441,33 +446,52 @@ body {
     position: relative;
     width: 15%;
     left: 4%;
-    color: var(--primary-yellow);
+    color: var(--primary-brown);
+    background: #ECB955;
     text-align: center;
-    background: var(--primary-brown);
     border-radius: 5px;
+}
+
+.pais .user-type-button {
+    color: var(--primary-brown);
 }
 
 .profissional {
     position: relative;
     left: 6%;
-    width: 20%;
-    color: var(--primary-yellow);
+    width: 15%;
+    color: var(--primary-brown);
+    background: var(--primary-orange);
     text-align: center;
-    background: var(--primary-brown);
     border-radius: 5px;
 }
 
-.user-type-button:hover {
-    border-radius: 5px;
-    background-color: #49361f;
+.profissional .user-type-button {
+    color: #EEDFBE;
 }
 
-.pais.selecionado .user-type-button,
+
+.pais.selecionado .user-type-button {
+    background: var(--primary-yellow);
+    border-radius: 5px;
+    transform: scale(1.2);
+}
+
+.pais .user-type-button:hover {
+    border-radius: 5px;
+    background: #b69043;
+}
+
 .profissional.selecionado .user-type-button {
-    background-color: #49361f;
+    background: var(--primary-orange);
     border-radius: 5px;
     transform: scale(1.2);
     /* Aumenta o tamanho das abas selecionadas */
+}
+
+.profissional .user-type-button:hover {
+    border-radius: 5px;
+    background: #ac6128;
 }
 
 .seta-aba {
@@ -479,4 +503,41 @@ body {
 .seta-aba.selecionado {
     transform: scale(1.2);
     opacity: 1;
+}
+
+@media screen and (max-width: 1360px) {
+    .navigation-wrap .nav-item {
+        padding: 0 0.3125rem;
+        /* Reduzindo o padding dos itens do menu */
+    }
+
+    .user-type {
+        left: 5%;
+        /* Ajustando a posição das abas */
+    }
+
+    .pais,
+    .profissional {
+        width: 17%;
+        /* Ajustando a largura das abas */
+    }
+}
+
+/* Responsividade para resolução 1400x900 */
+@media screen and (max-width: 1400px) {
+    .navigation-wrap .nav-item {
+        padding: 0 0.3125rem;
+        /* Reduzindo o padding dos itens do menu */
+    }
+
+    .user-type {
+        left: 15%;
+        /* Ajustando a posição das abas */
+    }
+
+    .pais,
+    .profissional {
+        width: 17%;
+        /* Ajustando a largura das abas */
+    }
 }

@@ -6,7 +6,7 @@ document.getElementById('paisBtn').addEventListener('click', function () {
     document.getElementById('setaProfissional').classList.remove('selecionado');
 
     // Troca a cor de fundo dos elementos .contato-dados e .contato-formulario
-    document.querySelector('.contato-dados').style.backgroundColor = '#D47833';
+    document.querySelector('.contato-dados').style.backgroundColor = '#392A18';
     document.querySelector('.contato-formulario').style.backgroundColor = '#ECB955';
 });
 
@@ -18,7 +18,7 @@ document.getElementById('profissionalBtn').addEventListener('click', function ()
     document.getElementById('setaPais').classList.remove('selecionado');
 
     // Troca a cor de fundo dos elementos .contato-dados e .contato-formulario
-    document.querySelector('.contato-dados').style.backgroundColor = '#ECB955';
+    document.querySelector('.contato-dados').style.backgroundColor = '#392A18';
     document.querySelector('.contato-formulario').style.backgroundColor = '#D47833';
 });
 
@@ -34,10 +34,10 @@ function selecionarAba(elemento) {
 
     // Verifica qual aba está selecionada e troca a cor de fundo dos elementos .contato-dados e .contato-formulario
     if (elemento.id === 'paisBtn') {
-        document.querySelector('.contato-dados').style.backgroundColor = '#D47833';
+        document.querySelector('.contato-dados').style.backgroundColor = '#392A18';
         document.querySelector('.contato-formulario').style.backgroundColor = '#ECB955';
     } else if (elemento.id === 'profissionalBtn') {
-        document.querySelector('.contato-dados').style.backgroundColor = '#ECB955';
+        document.querySelector('.contato-dados').style.backgroundColor = '#392A18';
         document.querySelector('.contato-formulario').style.backgroundColor = '#D47833';
     }
 }
